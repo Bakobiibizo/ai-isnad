@@ -1,0 +1,19 @@
+[package]
+name = "isnad-cli"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Command-line tool for Isnad agent trust attestations"
+
+[[bin]]
+name = "isnad"
+path = "src/main.rs"
+
+[dependencies]
+isnad = { path = "../.." }
+clap = { version = "4.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+sha2 = "0.10"
+base64 = "0.22"
